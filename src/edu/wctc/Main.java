@@ -32,7 +32,7 @@ public class Main {
     private static int getBagType(Scanner keyboard) {
         System.out.println("1. Classic (Lazy, Non-Thread-Safe)");
         System.out.println("2. Synchronized (Lazy, Thread-Safe)");
-        System.out.println("2. Early, Thread-Safe");
+        System.out.println("3. Early, Thread-Safe");
         System.out.println("4. Enum");
         System.out.print(">> ");
 
