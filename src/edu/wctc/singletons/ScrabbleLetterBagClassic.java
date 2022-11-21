@@ -18,15 +18,7 @@ public class ScrabbleLetterBagClassic extends AbstractScrabbleLetterBag {
     private ScrabbleLetterBagClassic() {
         System.out.println("Creating ScrabbleLetterBagClassic");
 
-        try {
-            // Simulate a long-running constructor, maybe a network or database call?
-            for (int i = 0; i < 5; i++) {
-                System.out.print(". ");
-                Thread.sleep(500);
-            }
-            System.out.println();
-        } catch (InterruptedException ex) {
-        }
+        fakeWaitTime();
 
         initTiles();
 

@@ -13,6 +13,18 @@ public abstract class AbstractScrabbleLetterBag {
         return tiles.remove(0);
     }
 
+    public void fakeWaitTime() {
+        try {
+            // Simulate a long-running constructor, maybe a network or database call?
+            for (int i = 0; i < 5; i++) {
+                System.out.print(". ");
+                Thread.sleep(500);
+            }
+            System.out.println();
+        } catch (InterruptedException ex) {
+        }
+    }
+
     protected void initTiles() {
         String[] scrabbleLetters = {"a", "a", "a", "a", "a", "a", "a", "a", "a",
                 "b", "b", "c", "c", "d", "d", "d", "d", "e", "e", "e", "e", "e",

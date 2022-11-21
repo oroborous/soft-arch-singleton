@@ -20,6 +20,15 @@ public enum ScrabbleLetterBagEnum {
     ScrabbleLetterBagEnum() {
         System.out.println("Creating ScrabbleLetterBagEnum");
 
+        fakeWaitTime();
+
+        initTiles();
+
+        System.out.printf("ScrabbleLetterBagEnum (%d) created with %d tiles%n%n",
+                this.hashCode(), tiles.size());
+    }
+
+    private void fakeWaitTime() {
         try {
             // Simulate a long-running constructor, maybe a network or database call?
             for (int i = 0; i < 5; i++) {
@@ -29,7 +38,9 @@ public enum ScrabbleLetterBagEnum {
             System.out.println();
         } catch (InterruptedException ex) {
         }
+    }
 
+    private void initTiles() {
         String[] scrabbleLetters = {"a", "a", "a", "a", "a", "a", "a", "a", "a",
                 "b", "b", "c", "c", "d", "d", "d", "d", "e", "e", "e", "e", "e",
                 "e", "e", "e", "e", "e", "e", "e", "f", "f", "g", "g", "g", "h",
@@ -42,9 +53,6 @@ public enum ScrabbleLetterBagEnum {
         tiles = new ArrayList<>(Arrays.asList(scrabbleLetters));
 
         Collections.shuffle(tiles);
-
-        System.out.printf("ScrabbleLetterBagEnum (%d) created with %d tiles%n%n",
-                this.hashCode(), tiles.size());
     }
 
     public String drawTile() {
